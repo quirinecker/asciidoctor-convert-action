@@ -1,23 +1,24 @@
 #!/usr/bin/bash
 
-#source ./docker-convert-util.sh
+source ./docker-convert-util.sh
+inputPath="$INPUT_INPUTPATH"
+outputPath="$INPUT_OUTPUTPATH"
 
-echo something is working
-echo "input => $INPUT_INPUTPATH"
+echo "input => $inputPath"
+echo "output => $outputPath"
 
-#outputPath="output"
-#inputPath="input"
-#
-#echo building html
-#
-#cp -r $inputPath/* $outputPath
-#
-#if [ $CONVERT_SLIDES = true ]; then
-#    convertFolderToSlides "$inputPath/slides" "$outputPath/slides"
-#fi
-#
-#outputPath="output"
-#inputPath="input"
-#
-#convertFolderToHTML "$outputPath"
+cd ..
+
+echo building html
+
+cp -r $inputPath/* $outputPath
+
+if [ $INPUT_SLIDES = true ]; then
+    convertFolderToSlides "$inputPath/slides" "$outputPath/slides"
+fi
+
+inputPath="$INPUT_INPUTPATH"
+outputPath="$INPUT_OUTPUTPATH"
+
+convertFolderToHTML "$outputPath"
 
