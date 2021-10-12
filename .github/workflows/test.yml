@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        uses: .
+        uses: ./.github/actions/asciidoctor-convert

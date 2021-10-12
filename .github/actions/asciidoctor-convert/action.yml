@@ -21,4 +21,4 @@ runs:
   args:
     - ${{ inputs.inputPath }}
     - ${{ inputs.outputPath }}
-    - ${{ inputs.slidesEnabled }}
+    - ${{ inputs.slides }}
