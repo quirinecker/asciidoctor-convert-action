@@ -1,4 +1,4 @@
-name: asciidoctor github pages
+name: building and pushing docker image
 
 on:
   push:

@@ -1,0 +1,14 @@
+name: testing the asciidoc convert action
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    name: Build ⚙
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: ../../action.yml
