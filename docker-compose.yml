@@ -6,7 +6,7 @@ services:
     container_name: convert-adoc
     build: .
     environment:
-      - CONVERT_SLIDES=false
+      - CONVERT_SLIDES=true
     volumes:
       - ./input/:/app/input
       - ./output/:/app/output

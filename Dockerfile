@@ -1,4 +1,4 @@
 FROM asciidoctor/docker-asciidoctor
 WORKDIR /app
-COPY convert.sh .
-CMD ["sh", "convert.sh"]
+COPY docker-scripts/* .
+CMD ["sh", "docker-convert.sh"]
