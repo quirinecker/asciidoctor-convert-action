@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  convert-adoc:
+    image: convert-adoc
+    container_name: convert-adoc
+    build: .
+    environment:
+      - CONVERT_SLIDES=false
+    volumes:
+      - ./input/:/app/input
+      - ./output/:/app/output
