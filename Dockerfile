@@ -1,6 +1,4 @@
 FROM asciidoctor/docker-asciidoctor
 WORKDIR /app
-COPY docker-scripts/ .
-RUN chmod +x *
-RUN ls -la
-ENTRYPOINT ["./docker-convert.sh"]
+RUN ls -la && ls .. -la
+ENTRYPOINT ["sh", "docker-convert.sh"]
