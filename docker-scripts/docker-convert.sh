@@ -2,6 +2,7 @@
 
 source ./docker-convert-util.sh
 
+echo something is working
 echo "input => $INPUT_INPUTPATH"
 
 outputPath="output"
