@@ -17,3 +17,8 @@ jobs:
           slides: false
           inputPath: input
           outputPath: output
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: output
