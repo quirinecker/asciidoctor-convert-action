@@ -2,7 +2,7 @@ version: "3.0"
 
 services:
   convert-adoc:
-    image: convert-adoc
+    image: docker.pkg.github.com/quirinecker/asciidoctor-convert-action/docker:latest
     container_name: convert-adoc
     build: .
     environment:
