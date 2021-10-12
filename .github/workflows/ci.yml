@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build Docker Image
         run: docker-compose build
-      - name: Login Docker Registry
-        run: echo ${{ secrets.GH_TOKEN }} | docker login ghcr.io --username QuirinEcker --password-stdin
       - name: Push Docker Image
-        run: docker-compose push
+        run: |
+          echo ${{ secrets.GH_TOKEN }} | docker login ghcr.io --username QuirinEcker --password-stdin
+          docker-compose push
