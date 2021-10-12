@@ -16,5 +16,5 @@ jobs:
         run: docker-compose build
       - name: Push Docker Image
         run: |
-          echo ${{ secrets.GH_TOKEN }} | docker login ghcr.io --username QuirinEcker --password-stdin
+          echo ${{ secrets.GH_TOKEN }} | docker login https://docker.pkg.github.com -u QuirinEcker --password-stdin
           docker-compose push
