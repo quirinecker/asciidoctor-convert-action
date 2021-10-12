@@ -8,6 +8,7 @@ echo "input => $inputPath"
 echo "output => $outputPath"
 echo building html
 
+mkdir $outputPath
 cp -r $inputPath/* $outputPath
 
 if [ $INPUT_SLIDES = true ]; then
