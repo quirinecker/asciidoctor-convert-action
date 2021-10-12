@@ -15,6 +15,6 @@ jobs:
       - name: Build Docker Image
         run: docker-compose build
       - name: Login Docker Registry
-        run: docker login ghcr.io --username actions-user --password-stdin
+        run: echo "" | docker login ghcr.io --username actions-user --password-stdin
       - name: Push Docker Image
         run: docker-compose push
