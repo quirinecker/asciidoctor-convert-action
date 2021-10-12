@@ -1,15 +1,11 @@
 #!/usr/bin/bash
 
-ls
-source ./docker-convert-util.sh
+source ./docker-scripts/docker-convert-util.sh
 inputPath="$INPUT_INPUTPATH"
 outputPath="$INPUT_OUTPUTPATH"
 
 echo "input => $inputPath"
 echo "output => $outputPath"
-
-cd ..
-
 echo building html
 
 cp -r $inputPath/* $outputPath
