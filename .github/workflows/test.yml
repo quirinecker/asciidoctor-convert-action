@@ -17,9 +17,8 @@ jobs:
           slides: false
           inputPath: input
           outputPath: output
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Commit & Push changes
+        uses: Andro999b/push@v1.3
         with:
-          branch: gh-pages
-          directory: ./output
-          force: true
+          github_token: ${{ github.token }}
+          directory: output
