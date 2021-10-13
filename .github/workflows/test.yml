@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: ./
+        uses: ./.github/actions/asciidoctor-convert
         with:
           slides: true
           inputPath: input
