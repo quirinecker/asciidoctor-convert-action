@@ -3,8 +3,8 @@
 source ./docker-scripts/docker-convert-util.sh
 inputPath="$INPUT_INPUTPATH"
 outputPath="$INPUT_OUTPUTPATH"
-slideInputPath="$INPUT_SLIDESINPUTPATH"
-slideOutputPath="$INPUT_SLIDESOUTPUTPATH"
+slideInputPath="$inputPath/slides"
+slideOutputPath="$outputPath/slides"
 
 echo "input => $inputPath"
 echo "output => $outputPath"

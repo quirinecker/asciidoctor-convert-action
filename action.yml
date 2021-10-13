@@ -15,14 +15,6 @@ inputs:
     description: 'if slides are enableed or not'
     required: false
     default: 'true'
-  slidesInputPath:
-    description: 'directory where the slides are located'
-    required: false
-    default: 'input/slides'
-  slidesOutputPath:
-    description: 'directory where the slides are located'
-    required: false
-    default: 'output/presentations'
 runs:
   using: docker
   image: ../../../Dockerfile
