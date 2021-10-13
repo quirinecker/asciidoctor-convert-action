@@ -22,7 +22,7 @@ inputs:
   slidesOutputPath:
     description: 'directory where the slides are located'
     required: false
-    default: 'output/slides'
+    default: 'output/presentations'
 runs:
   using: docker
   image: ../../../Dockerfile
