@@ -73,11 +73,9 @@ convertFolderToHTML() {
     outputPath=$1
 
     echo "=== compiling HTML  ==="
-    echo $outputPath
 
     i=1
     numberOfFiles=$(find "$outputPath" -type f -name "*.adoc" | wc -l)
-    echo "$numberOfFiles"
     for f in $(find "$outputPath" -type f -name "*.adoc"); do
         imgFolder=$(evalPath "/documents/${f%/*}" "/documents/output/images")
 
