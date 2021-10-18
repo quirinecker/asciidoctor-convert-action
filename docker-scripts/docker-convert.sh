@@ -12,6 +12,8 @@ echo "slideInputPath => $slideInputPath"
 echo "slideOutputPath => $slideOutputPath"
 echo building html
 
+ls -la
+mkdir out
 mkdir $outputPath
 cp -r $inputPath/* $outputPath
 
