@@ -9,7 +9,7 @@ js in the slides directory of the input directory.
 
 ```yaml
 name: Build
-uses: ./.github/actions/asciidoctor-convert
+uses: quirinecker/asciidoctor-convert-action@1.0
 with:
   slides: true
   inputPath: input
