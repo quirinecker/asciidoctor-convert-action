@@ -7,7 +7,7 @@ js in the slides directory of the input directory.
 
 ## Usage
 
-```
+```yaml
 name: Build
 uses: ./.github/actions/asciidoctor-convert
 with:
