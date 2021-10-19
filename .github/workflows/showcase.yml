@@ -1,4 +1,4 @@
-name: testing the asciidoc convert action
+name: Showcase
 
 on:
   push:
