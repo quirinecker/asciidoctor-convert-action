@@ -14,7 +14,7 @@ js in the slides directory of the input directory.
 
 ```yaml
 name: Build
-uses: quirinecker/asciidoctor-convert-action@1.1
+uses: quirinecker/asciidoctor-convert-action@1.0
 with:
   slides: true
   inputPath: input
