@@ -24,6 +24,14 @@ with:
 In this case this action will build the html files like docs but the documents in the `slides` directory like slides. 
 The other options define the input and the output directory. Where are the `.adoc` files placed and where are the files compiled to.
 
+### Parameters
+
+|              | inputPath | outputPath | slides         |
+|--------------|-----------|------------|----------------|
+| isOptional   | true      | true       | true           |
+| defaultValue | input     | output     | true           |
+| type         | string    | string     | boolean        |
+
 ## Scripts
 
 Sometimes it is useful to just convert or push it locally for a quick update. In the root directory are two scripts
