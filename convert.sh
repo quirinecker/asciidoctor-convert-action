@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 inputDir=$1
 outputDir=$2
 convertSlides=$3
