@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY docker-scripts .
 
-ENTRYPOINT ["ls"]
+ENTRYPOINT ["bash", "./docker-scripts/docker-convert.sh"]
