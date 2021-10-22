@@ -2,6 +2,6 @@ FROM asciidoctor/docker-asciidoctor
 
 WORKDIR /app
 
-COPY docker-scripts .
+COPY docker-scripts /
 
-ENTRYPOINT ["bash", "./docker-scripts/docker-convert.sh"]
+ENTRYPOINT ["bash", "/docker-scripts/docker-convert.sh"]
