@@ -2,7 +2,8 @@
 
 convertFolderToSlides() {
   inputPath=$1
-  outputPath=$2
+  dirOutputPath=$2
+  baseOutputPath=$3
 
   echo "=== compiling Slides  ==="
 
@@ -12,7 +13,7 @@ convertFolderToSlides() {
 
   for f in $(find "$outputPath" -type f -name "*.adoc"); do
       imgFolder=$(evalPath "/documents/${f%/*}" "/documents/output/images")
-      revealFolder=$(evalPath "/documents/${f%/*}" "/documents/output/slides/revealjs")
+      revealFolder=$(evalPath "/documents/${f%/*}" "/documents/$dirOutputPath/revealjs")
 
       echo "[$((i*100 / numberOfFiles)) %] compiling $f"
       convertFileToSlides "$f" "$imgFolder" "$revealFolder"
