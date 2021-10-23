@@ -2,7 +2,7 @@ FROM asciidoctor/docker-asciidoctor
 
 WORKDIR /app
 
-COPY docker-scripts /
+COPY docker-scripts /docker-scripts
 
 RUN ls
 
