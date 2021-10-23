@@ -9,7 +9,7 @@ convertFolderToSlides() {
 
   i=1
   numberOfFiles=$(find "$slidesOutputPath" -type f -name "*.adoc" | wc -l)
-  [ ! -d "$inputPath/revealjs" ] && downloadReveal "$inputPath" "$outputPath"
+  [ ! -d "$inputPath/revealjs" ] && downloadReveal "$inputPath" "$slidesOutputPath"
 
   for f in $(find "$slidesOutputPath" -type f -name "*.adoc"); do
       imgFolder=$(evalPath "/documents/${f%/*}" "/documents/output/images")
