@@ -2,18 +2,18 @@
 
 convertFolderToSlides() {
   inputPath=$1
-  dirOutputPath=$2
+  slidesOutputPath=$2
   baseOutputPath=$3
 
   echo "=== compiling Slides  ==="
 
   i=1
-  numberOfFiles=$(find "$outputPath" -type f -name "*.adoc" | wc -l)
+  numberOfFiles=$(find "$slidesOutputPath" -type f -name "*.adoc" | wc -l)
   [ ! -d "$inputPath/revealjs" ] && downloadReveal "$inputPath" "$outputPath"
 
-  for f in $(find "$outputPath" -type f -name "*.adoc"); do
+  for f in $(find "$slidesOutputPath" -type f -name "*.adoc"); do
       imgFolder=$(evalPath "/documents/${f%/*}" "/documents/output/images")
-      revealFolder=$(evalPath "/documents/${f%/*}" "/documents/$dirOutputPath/revealjs")
+      revealFolder=$(evalPath "/documents/${f%/*}" "/documents/$slidesOutputPath/revealjs")
 
       echo "[$((i*100 / numberOfFiles)) %] compiling $f"
       convertFileToSlides "$f" "$imgFolder" "$revealFolder"
