@@ -1,22 +1,11 @@
 #!/usr/bin/env bash
 
-inputDir=$1
-outputDir=$2
-
-if [ -z ${inputDir} ];
-then
-  inputDir='input'
-fi
-
-if [ -z ${outputDir} ];
-then
-  outputDir='output'
-fi
+source .env
 
 ./convert.sh $1 $2 $3
 
 remote=$(git remote get-url origin)
-cd "$outputDir" || exit
+cd "$OUTPUTPATH" || exit
 
 rm -rf .git
 
