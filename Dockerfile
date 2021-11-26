@@ -1,6 +1,6 @@
 FROM asciidoctor/docker-asciidoctor
 
-RUN adduser --system --group --shell /bin/sh builder
+RUN adduser --system --shell /bin/sh builder
 
 USER builder
 
