@@ -1,6 +1,6 @@
 FROM asciidoctor/docker-asciidoctor
 
-RUN adduser --system --shell /bin/sh builder
+RUN adduser --system --shell /bin/sh builder && usermod -aG sudo builder
 
 USER builder
 
