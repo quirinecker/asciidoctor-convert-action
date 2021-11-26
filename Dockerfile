@@ -1,9 +1,11 @@
 FROM asciidoctor/docker-asciidoctor
 
+RUN adduser --system --group --shell /bin/sh builder
+
+USER builder
+
 WORKDIR /app
 
 COPY docker-scripts /docker-scripts
-
-RUN ls
 
 ENTRYPOINT ["bash", "/docker-scripts/docker-convert.sh"]
