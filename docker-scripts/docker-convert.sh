@@ -24,3 +24,7 @@ outputPath="$INPUT_OUTPUTPATH"
 
 convertFolderToHTML "$outputPath"
 
+# set permissions of output folder to the same as the input folder - fixes #1
+if [ -d "$inputPath" ] && [ -d "$outputPath" ]; then
+    chown $(stat "$inputPath" -c %u:%g) "$outputPath" -R
+fi
